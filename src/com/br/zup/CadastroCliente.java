@@ -5,7 +5,7 @@ public class CadastroCliente {
     protected String nomeCompleto;
     protected String enderenco;
     protected String cpfOuRg;
-    protected String contaAssociada;
+    protected double contaAssociada;
 
     public CadastroCliente() {
     }
@@ -14,8 +14,9 @@ public class CadastroCliente {
         return nomeCompleto;
     }
 
-    public void setNomeCompleto(String nomeCompleto) {
+    public boolean setNomeCompleto(String nomeCompleto) {
         this.nomeCompleto = nomeCompleto;
+        return false;
     }
 
     public String getEnderenco() {
@@ -34,11 +35,11 @@ public class CadastroCliente {
         this.cpfOuRg = cpfOuRg;
     }
 
-    public String getContaAssociada() {
+    public double getContaAssociada() {
         return contaAssociada;
     }
 
-    public void setContaAssociada(String contaAssociada) {
+    public void setContaAssociada(double contaAssociada) {
         this.contaAssociada = contaAssociada;
     }
 }
