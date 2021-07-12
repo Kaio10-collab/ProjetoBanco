@@ -5,13 +5,13 @@ public class CadastroCliente {
     protected String nomeCompleto;
     protected String enderenco;
     protected Integer cpfOuRg;
-    protected double senha;
-    protected double contaAssociada;
+    protected int senha;
+    protected int contaAssociada;
 
     public CadastroCliente() {
     }
 
-    public CadastroCliente(String nomeCompleto, String enderenco, int cpfOuRg, double senha, double contaAssociada) {
+    public CadastroCliente(String nomeCompleto, String enderenco, Integer cpfOuRg, int senha, int contaAssociada) {
         this.nomeCompleto = nomeCompleto;
         this.enderenco = enderenco;
         this.cpfOuRg = cpfOuRg;
@@ -43,19 +43,19 @@ public class CadastroCliente {
         this.cpfOuRg = cpfOuRg;
     }
 
-    public double getSenha() {
+    public int getSenha() {
         return senha;
     }
 
-    public void setSenha(double senha) {
+    public void setSenha(int senha) {
         this.senha = senha;
     }
 
-    public double getContaAssociada() {
+    public int getContaAssociada() {
         return contaAssociada;
     }
 
-    public void setContaAssociada(double contaAssociada) {
+    public void setContaAssociada(int contaAssociada) {
         this.contaAssociada = contaAssociada;
     }
 }

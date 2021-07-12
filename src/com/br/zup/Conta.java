@@ -1,9 +1,13 @@
 package com.br.zup;
 
+import java.util.ArrayList;
+
 public class Conta extends CadastroCliente {
 
-    protected boolean sacaSaldoDaConta(double quantidade) {
-        double novoSaldoDaConta = this.contaAssociada - quantidade;
+    ArrayList<CadastroCliente> listaCliente = new ArrayList();
+
+    protected boolean sacaSaldoDaConta(int quantidade) {
+        int novoSaldoDaConta = this.contaAssociada - quantidade;
         this.contaAssociada = novoSaldoDaConta;
         return false;
     }
@@ -19,7 +23,7 @@ public class Conta extends CadastroCliente {
         return dados;
     }
 
-    boolean transfere(Conta destino, double valor) throws Exception{
+    boolean transfere(Conta destino, int valor) throws Exception{
         boolean retirou = this.sacaSaldoDaConta(valor);
         if (retirou == false){
             throw new Exception("Saldo insuficiente");
