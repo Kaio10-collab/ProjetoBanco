@@ -1,6 +1,6 @@
 package com.br.zup;
 
-public class Conta extends CadastroFuncionario {
+public class Conta extends CadastroCliente {
 
     protected boolean sacaSaldoDaConta(double quantidade) {
         double novoSaldoDaConta = this.contaAssociada - quantidade;
@@ -12,24 +12,17 @@ public class Conta extends CadastroFuncionario {
         this.contaAssociada += quantidade;
     }
 
-    public boolean extratoDaConta() {
-
-        CadastroCliente contaCliente = new CadastroCliente();
-        contaCliente.setNomeCompleto(getNomeCompleto());
-        contaCliente.setContaAssociada(getContaAssociada());
-        contaCliente.setCpfOuRg(getCpfOuRg());
-
-        CadastroFuncionario contaFuncionario = new CadastroFuncionario();
-        contaFuncionario.setCargoNaEmpresa(getCargoNaEmpresa());
-        contaFuncionario.setCpfOuRg(getCpfOuRg());
-        return false;
+    protected String extratoDaConta() {
+        String dados = "Titular: " + this.nomeCompleto;
+        dados += "\nDocumento Oficial: " + this.cpfOuRg;
+        dados += "\nSaldo Atual: " + this.contaAssociada;
+        return dados;
     }
 
-    boolean transfere(Conta destino, double valor){
+    boolean transfere(Conta destino, double valor) throws Exception{
         boolean retirou = this.sacaSaldoDaConta(valor);
         if (retirou == false){
-            // não deu pra sacar!
-            return false;
+            throw new Exception("Saldo insuficiente");
         }
         else {
             destino.depositaSaldoNaConta(valor);

@@ -4,19 +4,27 @@ public class CadastroCliente {
 
     protected String nomeCompleto;
     protected String enderenco;
-    protected String cpfOuRg;
+    protected Integer cpfOuRg;
+    protected double senha;
     protected double contaAssociada;
 
     public CadastroCliente() {
+    }
+
+    public CadastroCliente(String nomeCompleto, String enderenco, int cpfOuRg, double senha, double contaAssociada) {
+        this.nomeCompleto = nomeCompleto;
+        this.enderenco = enderenco;
+        this.cpfOuRg = cpfOuRg;
+        this.senha = senha;
+        this.contaAssociada = contaAssociada;
     }
 
     public String getNomeCompleto() {
         return nomeCompleto;
     }
 
-    public boolean setNomeCompleto(String nomeCompleto) {
+    public void setNomeCompleto(String nomeCompleto) {
         this.nomeCompleto = nomeCompleto;
-        return false;
     }
 
     public String getEnderenco() {
@@ -27,12 +35,20 @@ public class CadastroCliente {
         this.enderenco = enderenco;
     }
 
-    public String getCpfOuRg() {
+    public Integer getCpfOuRg() {
         return cpfOuRg;
     }
 
-    public void setCpfOuRg(String cpfOuRg) {
+    public void setCpfOuRg(Integer cpfOuRg) {
         this.cpfOuRg = cpfOuRg;
+    }
+
+    public double getSenha() {
+        return senha;
+    }
+
+    public void setSenha(double senha) {
+        this.senha = senha;
     }
 
     public double getContaAssociada() {
