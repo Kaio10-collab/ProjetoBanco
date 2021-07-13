@@ -1,10 +1,6 @@
 package com.br.zup;
 
-import java.util.ArrayList;
-
 public class Conta extends CadastroCliente {
-
-    ArrayList<CadastroCliente> listaCliente = new ArrayList();
 
     protected boolean sacaSaldoDaConta(int quantidade) {
         int novoSaldoDaConta = this.contaAssociada - quantidade;
@@ -17,16 +13,16 @@ public class Conta extends CadastroCliente {
     }
 
     protected String extratoDaConta() {
-        String dados = "Titular: " + this.nomeCompleto;
-        dados += "\nDocumento Oficial: " + this.cpfOuRg;
-        dados += "\nSaldo Atual: " + this.contaAssociada;
+        String dados = "Titular: " + this.getNomeCompleto();
+        dados += "\nDocumento Oficial: " + this.getCpfOuRg();
+        dados += "\nSaldo Atual: " + this.getContaAssociada();
         return dados;
     }
 
-    boolean transfere(Conta destino, int valor) throws Exception{
+    boolean transfere(Conta destino, int valor) {
         boolean retirou = this.sacaSaldoDaConta(valor);
         if (retirou == false){
-            throw new Exception("Saldo insuficiente");
+            return false;
         }
         else {
             destino.depositaSaldoNaConta(valor);

@@ -1,5 +1,7 @@
 package com.br.zup;
 
+import java.util.ArrayList;
+
 public class CadastroCliente {
 
     protected String nomeCompleto;
@@ -7,6 +9,7 @@ public class CadastroCliente {
     protected Integer cpfOuRg;
     protected int senha;
     protected int contaAssociada;
+    ArrayList<CadastroCliente> listaCliente = new ArrayList();
 
     public CadastroCliente() {
     }
@@ -57,5 +60,13 @@ public class CadastroCliente {
 
     public void setContaAssociada(int contaAssociada) {
         this.contaAssociada = contaAssociada;
+    }
+
+    public ArrayList<CadastroCliente> getListaCliente() {
+        return listaCliente;
+    }
+
+    public void setListaCliente(ArrayList<CadastroCliente> listaCliente) {
+        this.listaCliente = listaCliente;
     }
 }

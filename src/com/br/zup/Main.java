@@ -21,7 +21,7 @@ public class Main{
             String resposta = IO.retornoDados().nextLine();
 
             if (resposta.equalsIgnoreCase("1")) {
-                System.out.println("Digite seu nome completo: " + cadastroCliente.nomeCompleto);
+                System.out.println("Digite seu nome completo: " + cadastroCliente.getNomeCompleto());
                 System.out.println("Enderenço: " + cadastroCliente.getEnderenco());
                 System.out.println("Digite o CPF ou RG: " + cadastroCliente.getCpfOuRg());
                 System.out.println("Qual a sua conta: " + cadastroCliente.getContaAssociada());
@@ -31,10 +31,11 @@ public class Main{
             } else if (resposta.equalsIgnoreCase("3")) {
                 cliente.depositaSaldoNaConta(entrada.nextInt());
             } else if (resposta.equalsIgnoreCase("4")) {
-                cliente.transfere();
+                cliente.transfere(cliente, entrada.nextInt());
             } else if (resposta.equalsIgnoreCase("5")) {
                 cliente.extratoDaConta();
             } else if (resposta.equalsIgnoreCase("6")){
+                return;
             }
         }
     }
