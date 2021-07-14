@@ -1,9 +1,8 @@
 package com.br.zup;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
-public class Main{
+public class Main {
 
     public static void main(String[] args) {
 
@@ -11,10 +10,9 @@ public class Main{
         ArrayList<Conta> contaAssociada = new ArrayList<>();
         int id = 1;
 
-        Scanner entrada = new Scanner(System.in);
         CadastroCliente cliente;
         Conta conta;
-        Conta conta1 = new Conta();
+
         CadastroFuncionario cadastroFuncionario = new CadastroFuncionario("Kaio Sanches", "Rua Fulano de Tal", "77800172813", "Caixa",
                 2345, 2876-4);
 
@@ -35,7 +33,7 @@ public class Main{
                 System.out.println("Sua conta é: " + id );
                 System.out.println("Digite a sua senha: ");
                 String senha = IO.retornoDados().nextLine();
-                cliente = new CadastroCliente(nome, endereco, Integer.parseInt(cpf),Integer.parseInt(senha) ,id);
+                cliente = new CadastroCliente(nome, endereco, Integer.parseInt(cpf), Integer.parseInt(senha), id);
                 conta = new Conta();
                 cadastroCliente.add(cliente);
                 contaAssociada.add(conta);
@@ -59,7 +57,7 @@ public class Main{
                 String idd2 = IO.retornoDados().nextLine();
                 System.out.println("Valor: ");
                 String valor = IO.retornoDados().nextLine();
-                contaAssociada.get(Integer.parseInt(idd)).transfere(contaAssociada.get(Integer.parseInt(idd)), Integer.parseInt(valor));
+                contaAssociada.get(Integer.parseInt(idd)).transfere(contaAssociada.get(Integer.parseInt(idd2)), Integer.parseInt(valor));
             } else if (resposta.equalsIgnoreCase("5")) {
                 System.out.println("Conta: ");
                 String idd = IO.retornoDados().nextLine();

@@ -2,20 +2,25 @@ package com.br.zup;
 
 public class Conta extends CadastroCliente {
 
+    protected double saldo;
+
+    public Conta() {
+    }
+
     protected boolean sacaSaldoDaConta(int quantidade) {
-        int novoSaldoDaConta = this.contaAssociada - quantidade;
-        this.contaAssociada = novoSaldoDaConta;
+        double novoSaldoDaConta = this.saldo - quantidade;
+        this.saldo = novoSaldoDaConta;
         return false;
     }
 
     protected void depositaSaldoNaConta(double quantidade) {
-        this.contaAssociada += quantidade;
+        this.saldo += quantidade;
     }
 
     protected String extratoDaConta() {
-        String dados = "Titular: " + this.getNomeCompleto();
-        dados += "\nDocumento Oficial: " + this.getCpfOuRg();
-        dados += "\nSaldo Atual: " + this.getContaAssociada();
+        String dados = "Titular: " + this.nomeCompleto.equalsIgnoreCase(getNomeCompleto());
+        dados += "\nDocumento Oficial: " + this.cpfOuRg.equals(getCpfOuRg());
+        dados += "\nSaldo Atual: " + this.saldo;
         return dados;
     }
 
