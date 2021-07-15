@@ -8,6 +8,14 @@ public class CadastroFuncionario extends Pessoa  {
     public CadastroFuncionario() {
     }
 
+    public CadastroFuncionario(String cargoNaEmpresa, double salario) {
+        this.cargoNaEmpresa = cargoNaEmpresa;
+        this.salario = salario;
+    }
+
+    public CadastroFuncionario(String kaio_sanches, String rua_fulano_de_tal, String s, String caixa, int i, int i1) {
+    }
+
     public String getCargoNaEmpresa() {
         return cargoNaEmpresa;
     }

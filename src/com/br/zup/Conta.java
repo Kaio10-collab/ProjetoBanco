@@ -7,14 +7,29 @@ public class Conta extends CadastroCliente {
     public Conta() {
     }
 
-    protected boolean sacaSaldoDaConta(int quantidade) {
-        double novoSaldoDaConta = this.saldo - quantidade;
-        this.saldo = novoSaldoDaConta;
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
+    protected boolean sacaSaldoDaConta(double quantidade) {
+        if ((saldo-quantidade) >=0) {
+            saldo -= quantidade;
+            return true;
+        }
         return false;
     }
 
     protected void depositaSaldoNaConta(double quantidade) {
-        this.saldo += quantidade;
+        saldo += quantidade;
     }
 
     protected String extratoDaConta() {
@@ -24,8 +39,8 @@ public class Conta extends CadastroCliente {
         return dados;
     }
 
-    boolean transfere(Conta destino, int valor) {
-        boolean retirou = this.sacaSaldoDaConta(valor);
+    protected boolean transfere(Conta destino, double valor) {
+        boolean retirou = sacaSaldoDaConta(valor);
         if (retirou == false){
             return false;
         }

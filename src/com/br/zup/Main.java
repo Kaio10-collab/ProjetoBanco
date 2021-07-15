@@ -13,10 +13,9 @@ public class Main {
         CadastroCliente cliente;
         Conta conta;
 
-        CadastroFuncionario cadastroFuncionario = new CadastroFuncionario("Kaio Sanches", "Rua Fulano de Tal", "77800172813", "Caixa",
-                2345, 2876-4);
+        CadastroFuncionario cadastroFuncionario = new CadastroFuncionario();
 
-        System.out.println("Bem vindo ao Banco: " + cadastroFuncionario.nomeCompleto + " " + cadastroFuncionario.cargoNaEmpresa + " " + cadastroFuncionario.cpfOuRg);
+        System.out.println("Bem vindo ao Banco: " + cadastroFuncionario);
 
         while (true) {
             IO.mostrarTexto("Selecione a opção desejada: \n1 Cadastro Cliente \n2 Sacar dinheiro \n3 Depositar dinheiro \n4 Transferência dinheiro \n5 Extrato \n6 sair ");

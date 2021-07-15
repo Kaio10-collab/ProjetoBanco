@@ -7,6 +7,9 @@ public class CadastroCliente extends Pessoa {
     public CadastroCliente() {
     }
 
+    public CadastroCliente(String nome, String endereco, int parseInt, int parseInt1, int id) {
+    }
+
     public int getSenha() {
         return senha;
     }
