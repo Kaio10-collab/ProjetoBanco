@@ -3,6 +3,8 @@ package com.br.zup;
 public class CadastroCliente extends Pessoa {
 
     protected int senha;
+    protected String pessoaFisica;
+    protected String pessoaJuridica;
 
     public CadastroCliente() {
     }
@@ -16,5 +18,21 @@ public class CadastroCliente extends Pessoa {
 
     public void setSenha(int senha) {
         this.senha = senha;
+    }
+
+    public String getPessoaFisica() {
+        return pessoaFisica;
+    }
+
+    public void setPessoaFisica(String pessoaFisica) {
+        this.pessoaFisica = pessoaFisica;
+    }
+
+    public String getPessoaJuridica() {
+        return pessoaJuridica;
+    }
+
+    public void setPessoaJuridica(String pessoaJuridica) {
+        this.pessoaJuridica = pessoaJuridica;
     }
 }

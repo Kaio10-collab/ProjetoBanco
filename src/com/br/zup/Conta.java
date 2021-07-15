@@ -4,22 +4,6 @@ public class Conta extends CadastroCliente {
 
     protected double saldo;
 
-    public Conta() {
-    }
-
-    public double getSaldo() {
-        return saldo;
-    }
-
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString();
-    }
-
     protected boolean sacaSaldoDaConta(double quantidade) {
         if ((saldo-quantidade) >=0) {
             saldo -= quantidade;
@@ -33,9 +17,9 @@ public class Conta extends CadastroCliente {
     }
 
     protected String extratoDaConta() {
-        String dados = "Titular: " + this.nomeCompleto.equalsIgnoreCase(getNomeCompleto());
-        dados += "\nDocumento Oficial: " + this.cpfOuRg.equals(getCpfOuRg());
-        dados += "\nSaldo Atual: " + this.saldo;
+        String dados = "Titular: " + nomeCompleto;
+        dados += "\nDocumento Oficial: " + cpfOuRg;
+        dados += "\nSaldo Atual: " + saldo;
         return dados;
     }
 
