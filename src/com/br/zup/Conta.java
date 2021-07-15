@@ -1,6 +1,6 @@
 package com.br.zup;
 
-public class Conta extends CadastroCliente {
+public class Conta extends AtributosCliente {
 
     protected double saldo;
 
@@ -31,6 +31,16 @@ public class Conta extends CadastroCliente {
         else {
             destino.depositaSaldoNaConta(valor);
             return true;
+        }
+    }
+
+    public boolean autentica(int senha) {
+        if (this.senha == senha) {
+            System.out.println("Acesso Permitido!");
+            return true;
+        } else {
+            System.out.println("Acesso Negado!");
+            return false;
         }
     }
 }

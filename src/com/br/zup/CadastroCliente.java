@@ -1,38 +1,16 @@
 package com.br.zup;
 
-public class CadastroCliente extends Pessoa {
+import java.util.ArrayList;
 
-    protected int senha;
-    protected String pessoaFisica;
-    protected String pessoaJuridica;
+public class CadastroCliente {
 
-    public CadastroCliente() {
-    }
+    public static void main(String[] args) {
 
-    public CadastroCliente(String nome, String endereco, int parseInt, int parseInt1, int id) {
-    }
+        ArrayList<AtributosCliente> atributosClientes = new ArrayList();
 
-    public int getSenha() {
-        return senha;
-    }
+        CadastroCliente cliente = new CadastroCliente();
 
-    public void setSenha(int senha) {
-        this.senha = senha;
-    }
 
-    public String getPessoaFisica() {
-        return pessoaFisica;
-    }
 
-    public void setPessoaFisica(String pessoaFisica) {
-        this.pessoaFisica = pessoaFisica;
-    }
-
-    public String getPessoaJuridica() {
-        return pessoaJuridica;
-    }
-
-    public void setPessoaJuridica(String pessoaJuridica) {
-        this.pessoaJuridica = pessoaJuridica;
     }
 }

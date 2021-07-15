@@ -2,12 +2,13 @@ package com.br.zup;
 
 import java.util.ArrayList;
 
-public class Main {
+/**
+public class testeCódigoMain {
 
     public static void main(String[] args) {
 
         ArrayList<CadastroCliente> cadastroCliente = new ArrayList();
-        ArrayList<Conta> contaAssociada = new ArrayList<>();
+        ArrayList<Conta> contaAssociada = new ArrayList();
         int id = 1;
 
         CadastroCliente cliente;
@@ -15,7 +16,7 @@ public class Main {
 
         CadastroFuncionario cadastroFuncionario = new CadastroFuncionario();
 
-        System.out.println("Bem vindo ao Banco: " + cadastroFuncionario);
+        System.out.println("Bem vindo ao Banco: " + cadastroFuncionario.getNomeCompleto());
 
         while (true) {
             IO.mostrarTexto("Selecione a opção desejada: \n1 Cadastro Cliente \n2 Sacar dinheiro \n3 Depositar dinheiro \n4 Transferência dinheiro \n5 Extrato \n6 sair ");
@@ -30,9 +31,9 @@ public class Main {
                 System.out.println("Digite o CPF ou RG: ");
                 String cpf = IO.retornoDados().nextLine();
                 System.out.println("Sua conta é: " + id );
-                System.out.println("Digite a sua senha: ");
-                String senha = IO.retornoDados().nextLine();
-                cliente = new CadastroCliente(nome, endereco, Integer.parseInt(cpf), Integer.parseInt(senha), id);
+                int senha = IO.retornoDados().nextInt();
+                System.out.println("Digite a sua senha: " + senha);
+                cliente = new CadastroCliente();
                 conta = new Conta();
                 cadastroCliente.add(cliente);
                 contaAssociada.add(conta);
@@ -45,10 +46,10 @@ public class Main {
                 contaAssociada.get(Integer.parseInt(idd)).sacaSaldoDaConta(Integer.parseInt(valor));
             } else if (resposta.equalsIgnoreCase("3")) {
                 System.out.println("Conta: ");
-                String idd = IO.retornoDados().nextLine();
+                int idd = IO.retornoDados().nextInt();
                 System.out.println("Valor: ");
-                String valor = IO.retornoDados().nextLine();
-                contaAssociada.get(Integer.parseInt(idd)).depositaSaldoNaConta(Integer.parseInt(valor));
+                double valor = IO.retornoDados().nextDouble();
+                contaAssociada.get(idd).depositaSaldoNaConta(valor);
             } else if (resposta.equalsIgnoreCase("4")) {
                 System.out.println("Conta principal: ");
                 String idd = IO.retornoDados().nextLine();
@@ -67,3 +68,4 @@ public class Main {
         }
     }
 }
+ */

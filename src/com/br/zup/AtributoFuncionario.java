@@ -1,19 +1,16 @@
 package com.br.zup;
 
-public class CadastroFuncionario extends Pessoa  {
+public class AtributoFuncionario extends Pessoa  {
 
     protected String cargoNaEmpresa;
     protected double salario;
 
-    public CadastroFuncionario() {
+    public AtributoFuncionario() {
     }
 
-    public CadastroFuncionario(String cargoNaEmpresa, double salario) {
+    public AtributoFuncionario(String cargoNaEmpresa, double salario) {
         this.cargoNaEmpresa = cargoNaEmpresa;
         this.salario = salario;
-    }
-
-    public CadastroFuncionario(String kaio_sanches, String rua_fulano_de_tal, String s, String caixa, int i, int i1) {
     }
 
     public String getCargoNaEmpresa() {
