@@ -4,12 +4,11 @@ import java.util.ArrayList;
 
 public class CadastroCliente {
 
-    public static void main(String[] args) {
-
-        ArrayList<AtributosCliente> atributosClientes = new ArrayList();
+    protected void cadastrarCliente() {
 
         CadastroCliente cliente = new CadastroCliente();
 
+        ArrayList<CadastroCliente> cadastrarCliente = new ArrayList();
 
 
     }
