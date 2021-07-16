@@ -1,14 +1,11 @@
 package com.br.zup;
 
-import java.util.ArrayList;
+public class CadastroCliente extends Cliente {
 
-public class CadastroCliente {
+    Funcionario funcionario = new Funcionario();
 
-    protected void cadastrarCliente() {
-
-        CadastroCliente cliente = new CadastroCliente();
-
-        ArrayList<CadastroCliente> cadastrarCliente = new ArrayList();
+    switch(){
+    }
 
 
     }
