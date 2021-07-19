@@ -1,12 +1,7 @@
 package com.br.zup;
 
-public class CadastroCliente extends Cliente {
+public class CadastroCliente  {
 
     Funcionario funcionario = new Funcionario();
 
-    switch(){
-    }
-
-
-    }
 }

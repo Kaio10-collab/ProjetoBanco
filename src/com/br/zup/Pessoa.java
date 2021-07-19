@@ -10,6 +10,13 @@ public class Pessoa {
     public Pessoa() {
     }
 
+    public Pessoa(String nomeCompleto, String enderenco, String cpfOuRg, double contaAssociada) {
+        this.nomeCompleto = nomeCompleto;
+        this.enderenco = enderenco;
+        this.cpfOuRg = cpfOuRg;
+        this.contaAssociada = contaAssociada;
+    }
+
     public String getNomeCompleto() {
         return nomeCompleto;
     }
