@@ -3,6 +3,7 @@ package com.br.zup;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Conta {
 
@@ -11,37 +12,41 @@ public class Conta {
     Random random = new Random(340983405);
     protected int numeroConta = random.nextInt();
 
-    protected boolean sacaSaldoDaConta(double quantidade) {
+    Scanner valorSaque = new Scanner(System.in);
+
+    protected double sacaSaldoDaConta(double quantidade) {
+        System.out.println("Digite o valor do saque: ");
+        System.out.println(valorSaque.nextDouble());
         if ((saldo-quantidade) >=0) {
             saldo -= quantidade;
             operacoes.add("Saque no valor de R$: " + quantidade);
-            return true;
-        }else {
+        }
+        else {
             System.out.println("Saldo insuficiente para saque.");
         }
+        return quantidade;
+    }
+
+    protected boolean depositaSaldoNaConta(double quantidade) {
+        saldo += quantidade;
+        operacoes.add("Deposito no valor de R$: " + quantidade);
         return false;
     }
 
-    protected void depositaSaldoNaConta(double quantidade) {
-        saldo += quantidade;
-        operacoes.add("Deposito no valor de R$: " + quantidade);
-    }
-
-    protected void extratoDaConta() {
+    protected void extratoDaConta(double quantidade) {
         for (String extrato : operacoes) {
             System.out.println(extrato);
         }
     }
 
-    protected boolean transfere(Conta destino, double valor) {
-        boolean retirou = sacaSaldoDaConta(valor);
-        if (retirou == false){
-            return false;
+    protected void transfere(Conta destino, double valor) {
+        double retirou = sacaSaldoDaConta(valor);
+        if (retirou == sacaSaldoDaConta(valor)){
+
         }
         else {
             destino.depositaSaldoNaConta(valor);
             operacoes.add("Transferência no valor de R$: " + valor + "para a conta " + numeroConta);
-            return true;
         }
     }
 }

@@ -5,16 +5,9 @@ public class Pessoa {
     protected String nomeCompleto;
     protected String enderenco;
     protected String cpfOuRg;
-    protected double contaAssociada;
+    protected int contaAssociada;
 
     public Pessoa() {
-    }
-
-    public Pessoa(String nomeCompleto, String enderenco, String cpfOuRg, double contaAssociada) {
-        this.nomeCompleto = nomeCompleto;
-        this.enderenco = enderenco;
-        this.cpfOuRg = cpfOuRg;
-        this.contaAssociada = contaAssociada;
     }
 
     public String getNomeCompleto() {
@@ -45,7 +38,7 @@ public class Pessoa {
         return contaAssociada;
     }
 
-    public void setContaAssociada(double contaAssociada) {
+    public void setContaAssociada(int contaAssociada) {
         this.contaAssociada = contaAssociada;
     }
 }
