@@ -1,4 +1,7 @@
-package com.br.zup;
+package com.br.zup.view;
+
+import com.br.zup.service.ClienteService;
+import com.br.zup.service.ContaService;
 
 import java.util.Scanner;
 
@@ -8,8 +11,8 @@ public class ContaBancaria  {
 
         Scanner scan = new Scanner(System.in);
 
-        Conta conta = new Conta();
-        CadastroCliente cliente = new CadastroCliente();
+        ContaService conta = new ContaService();
+        ClienteService cliente = new ClienteService();
         int opcao;
 
         do {
@@ -30,8 +33,8 @@ public class ContaBancaria  {
                 System.out.println(conta.depositaSaldoNaConta(conta.saldo));
             }else if (opcao == 4){
                 System.out.println(conta.transfere(conta.depositaSaldoNaConta(scan.nextDouble()), 0));
-            } else if (opcao == 5) {
-                System.out.println(conta.extratoDaConta(conta.saldo));
+           } else if (opcao == 5) {
+               System.out.println(conta.extratoDaConta(conta.saldo));
             }
         } while (opcao!=6);
     }

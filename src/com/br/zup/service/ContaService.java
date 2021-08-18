@@ -1,11 +1,11 @@
-package com.br.zup;
+package com.br.zup.service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Conta {
+public class ContaService {
 
     protected double saldo;
     private List<String> operacoes = new ArrayList();
@@ -39,7 +39,7 @@ public class Conta {
         }
     }
 
-    protected void transfere(Conta destino, double valor) {
+    protected void transfere(ContaService destino, double valor) {
         double retirou = sacaSaldoDaConta(valor);
         if (retirou == sacaSaldoDaConta(valor)){
 
