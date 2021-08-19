@@ -6,7 +6,6 @@ public class ClienteController {
 
     ClienteService clienteService = new ClienteService();
 
-
     public void add(Cliente cliente) {
         this.clienteService.add(cliente);
     }
@@ -34,5 +33,4 @@ public class ClienteController {
     public void delete(Cliente cliente) {
         this.clienteService.delete(cliente);
     }
-
 }
