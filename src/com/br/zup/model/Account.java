@@ -1,18 +1,31 @@
 package com.br.zup.model;
 
-import com.br.zup.service.ContaService;
+public class Account {
 
-
-public class Cliente {
-
+    public double salario;
+    public String cargo;
     public String nome;
     public String cpf;
     public int senha;
-    public int id;
     public String endereco;
-    public ContaService conta;
 
-    public Cliente() {
+    public Account() {
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
     }
 
     public String getNome() {
@@ -39,27 +52,11 @@ public class Cliente {
         this.senha = senha;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getEndereco() {
         return endereco;
     }
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
-    }
-
-    public ContaService getConta() {
-        return conta;
-    }
-
-    public void setConta(ContaService conta) {
-        this.conta = conta;
     }
 }

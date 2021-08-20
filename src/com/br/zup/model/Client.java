@@ -1,31 +1,16 @@
 package com.br.zup.model;
 
-public class Funcionario{
 
-    public double salario;
-    public String cargo;
+public class Client {
+
     public String nome;
     public String cpf;
     public int senha;
+    public int id;
     public String endereco;
+    public ContaService conta;
 
-    public Funcionario() {
-    }
-
-    public double getSalario() {
-        return salario;
-    }
-
-    public void setSalario(double salario) {
-        this.salario = salario;
-    }
-
-    public String getCargo() {
-        return cargo;
-    }
-
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
+    public Client() {
     }
 
     public String getNome() {
@@ -52,11 +37,27 @@ public class Funcionario{
         this.senha = senha;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getEndereco() {
         return endereco;
     }
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
+    }
+
+    public ContaService getConta() {
+        return conta;
+    }
+
+    public void setConta(ContaService conta) {
+        this.conta = conta;
     }
 }
