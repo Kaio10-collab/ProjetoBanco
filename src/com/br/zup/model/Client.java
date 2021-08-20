@@ -3,22 +3,29 @@ package com.br.zup.model;
 
 public class Client {
 
-    public String nome;
-    public String cpf;
-    public int senha;
-    public int id;
-    public String endereco;
-    public ContaService conta;
+    protected String name;
+    protected String cpf;
+    protected String phoneNumber;
+    protected String anddress;
+    protected Account account;
 
     public Client() {
     }
 
-    public String getNome() {
-        return nome;
+    public Client(String name, String cpf, String phoneNumber, String anddress, Account account) {
+        this.name = name;
+        this.cpf = cpf;
+        this.phoneNumber = phoneNumber;
+        this.anddress = anddress;
+        this.account = account;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getCpf() {
@@ -29,35 +36,27 @@ public class Client {
         this.cpf = cpf;
     }
 
-    public int getSenha() {
-        return senha;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setSenha(int senha) {
-        this.senha = senha;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
-    public int getId() {
-        return id;
+    public String getAnddress() {
+        return anddress;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setAnddress(String anddress) {
+        this.anddress = anddress;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public Account getAccount() {
+        return account;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
-    public ContaService getConta() {
-        return conta;
-    }
-
-    public void setConta(ContaService conta) {
-        this.conta = conta;
+    public void setAccount(Account account) {
+        this.account = account;
     }
 }
