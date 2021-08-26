@@ -1,6 +1,7 @@
 package com.br.zup.model;
-
-
+/**
+ * Definindo uma classe chamada Cliente, criando get/set e constructor.
+ */
 public class Client {
 
     protected String name;

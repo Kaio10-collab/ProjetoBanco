@@ -1,7 +1,9 @@
 package com.br.zup.model;
 
 import java.time.LocalDate;
-
+/**
+ * Definindo uma classe chamada transação, criando get/set e constructor.
+ */
 public class Transaction {
 
     protected Double amountTransaction;

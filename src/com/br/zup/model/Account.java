@@ -1,5 +1,7 @@
 package com.br.zup.model;
-
+/**
+ * Definindo uma classe chamada Conta, criando get/set e constructor.
+ */
 public class Account {
 
     protected String numberAccount;
